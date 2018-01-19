@@ -17,8 +17,8 @@
 
 @end
 
-NSString * const googleMapsKey = @"AIzaSyBL2GP-ueCsf6iPkwdCfVze34QEnq6VYJw";
-NSString * const googlePlacesKey = @"AIzaSyAIVjpv3NFjtakCw_0Fq1xFzEF_tmYNdvc";
+static NSString *const googleMapsKey = @"AIzaSyBL2GP-ueCsf6iPkwdCfVze34QEnq6VYJw";
+static NSString *const googlePlacesKey = @"AIzaSyAIVjpv3NFjtakCw_0Fq1xFzEF_tmYNdvc";
 
 @implementation AppDelegate
 

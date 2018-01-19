@@ -22,9 +22,9 @@
 		C738EA2F1FFCF85C0083DFBC /* FinalProjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C738EA2E1FFCF85C0083DFBC /* FinalProjectTests.m */; };
 		C738EA3A1FFCF85C0083DFBC /* FinalProjectUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = C738EA391FFCF85C0083DFBC /* FinalProjectUITests.m */; };
 		C74147F520128033003C633F /* WorkWithCoreDataTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C74147F420128033003C633F /* WorkWithCoreDataTests.m */; };
+		C74147FE20129367003C633F /* KMD_TempViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C74147FD20129367003C633F /* KMD_TempViewController.m */; };
 		C75C5E4E2011673B00E2CD8C /* KMD_PushAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = C75C5E4D2011673B00E2CD8C /* KMD_PushAnimation.m */; };
 		C75C5E52201167C700E2CD8C /* KMD_PopAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = C75C5E51201167C700E2CD8C /* KMD_PopAnimation.m */; };
-		C75F17CB200A990F0030E3B3 /* tempViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C75F17CA200A990F0030E3B3 /* tempViewController.m */; };
 		C75F1860200BF19F0030E3B3 /* CoordinatesForGMaps.m in Sources */ = {isa = PBXBuildFile; fileRef = C75F185F200BF19E0030E3B3 /* CoordinatesForGMaps.m */; };
 		C7731B11200D4F320067C1B2 /* Points+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = C7731B0B200D4F320067C1B2 /* Points+CoreDataProperties.m */; };
 		C7731B12200D4F320067C1B2 /* Routes+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = C7731B0E200D4F320067C1B2 /* Routes+CoreDataClass.m */; };
@@ -92,12 +92,12 @@
 		C74147F220128033003C633F /* WorkWithCoreDataTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WorkWithCoreDataTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C74147F420128033003C633F /* WorkWithCoreDataTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WorkWithCoreDataTests.m; sourceTree = "<group>"; };
 		C74147F620128033003C633F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C74147FC20129367003C633F /* KMD_TempViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KMD_TempViewController.h; sourceTree = "<group>"; };
+		C74147FD20129367003C633F /* KMD_TempViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KMD_TempViewController.m; sourceTree = "<group>"; };
 		C75C5E4C2011673B00E2CD8C /* KMD_PushAnimation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KMD_PushAnimation.h; sourceTree = "<group>"; };
 		C75C5E4D2011673B00E2CD8C /* KMD_PushAnimation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KMD_PushAnimation.m; sourceTree = "<group>"; };
 		C75C5E50201167C700E2CD8C /* KMD_PopAnimation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KMD_PopAnimation.h; sourceTree = "<group>"; };
 		C75C5E51201167C700E2CD8C /* KMD_PopAnimation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KMD_PopAnimation.m; sourceTree = "<group>"; };
-		C75F17C9200A990F0030E3B3 /* tempViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = tempViewController.h; sourceTree = "<group>"; };
-		C75F17CA200A990F0030E3B3 /* tempViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = tempViewController.m; sourceTree = "<group>"; };
 		C75F185E200BF19E0030E3B3 /* CoordinatesForGMaps.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoordinatesForGMaps.h; sourceTree = "<group>"; };
 		C75F185F200BF19E0030E3B3 /* CoordinatesForGMaps.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoordinatesForGMaps.m; sourceTree = "<group>"; };
 		C7731B08200D4F320067C1B2 /* Points+CoreDataProperties.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Points+CoreDataProperties.h"; sourceTree = "<group>"; };
@@ -292,10 +292,10 @@
 				C72AB866200F692400D1CA03 /* KMD_StartNewTripViewController.m */,
 				C72AB868200F721000D1CA03 /* KMD_NewTripMainViewController.h */,
 				C72AB869200F721000D1CA03 /* KMD_NewTripMainViewController.m */,
-				C75F17C9200A990F0030E3B3 /* tempViewController.h */,
-				C75F17CA200A990F0030E3B3 /* tempViewController.m */,
 				C72AB86B200F72DE00D1CA03 /* KMD_GoogleMapsViewController.h */,
 				C72AB86C200F72DE00D1CA03 /* KMD_GoogleMapsViewController.m */,
+				C74147FC20129367003C633F /* KMD_TempViewController.h */,
+				C74147FD20129367003C633F /* KMD_TempViewController.m */,
 			);
 			path = "New trip";
 			sourceTree = "<group>";
@@ -646,13 +646,13 @@
 			files = (
 				C72AB867200F692400D1CA03 /* KMD_StartNewTripViewController.m in Sources */,
 				C75C5E4E2011673B00E2CD8C /* KMD_PushAnimation.m in Sources */,
+				C74147FE20129367003C633F /* KMD_TempViewController.m in Sources */,
 				C7EA245A2010BBB100256648 /* KMD_PreviousTripsViewController.m in Sources */,
 				C75C5E52201167C700E2CD8C /* KMD_PopAnimation.m in Sources */,
 				C7731B12200D4F320067C1B2 /* Routes+CoreDataClass.m in Sources */,
 				C7EA246420110A8D00256648 /* KMD_NavigationControllerDelegate.m in Sources */,
 				C7731B11200D4F320067C1B2 /* Points+CoreDataProperties.m in Sources */,
 				C7731B13200D4F320067C1B2 /* Routes+CoreDataProperties.m in Sources */,
-				C75F17CB200A990F0030E3B3 /* tempViewController.m in Sources */,
 				C72AB864200F604700D1CA03 /* KMD_StartScreenViewController.m in Sources */,
 				C75F1860200BF19F0030E3B3 /* CoordinatesForGMaps.m in Sources */,
 				C738EA141FFCF85B0083DFBC /* AppDelegate.m in Sources */,

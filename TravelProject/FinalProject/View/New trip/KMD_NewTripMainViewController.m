@@ -8,7 +8,7 @@
 
 #import "KMD_NewTripMainViewController.h"
 #import "KMD_StartScreenViewController.h"
-#import "tempViewController.h"
+#import "KMD_TempViewController.h"
 #import "KMD_GoogleMapsViewController.h"
 #import "Routes+CoreDataClass.h"
 #import "Points+CoreDataClass.h"
@@ -16,7 +16,7 @@
 
 @interface KMD_NewTripMainViewController ()
 
-@property (nonatomic, strong) tempViewController *tmpController;
+@property (nonatomic, strong) KMD_TempViewController *tmpController;
 @property (nonatomic, strong) KMD_GoogleMapsViewController *mapController;
 @property (nonatomic, strong) UINavigationBar *navigationBar;
 
@@ -39,7 +39,7 @@ static NSString *const faveIcon = @"placeToVisitIcon";
     
     
     self.mapController = [KMD_GoogleMapsViewController new];
-    self.tmpController = [tempViewController new];
+    self.tmpController = [KMD_TempViewController new];
 
     UITabBarItem *tmpTabBarItem = [[UITabBarItem alloc] initWithTitle:@"route"
                                                                 image:[UIImage imageNamed:faveIcon]
@@ -66,7 +66,6 @@ static NSString *const faveIcon = @"placeToVisitIcon";
                                     route.finishPoint.name];
     
     UINavigationItem* navigationBarItem = [[UINavigationItem alloc] initWithTitle:navigationBarTitle];
-    //[self.navBar setBarTintColor:[UIColor lightGrayColor]];
     UIBarButtonItem* backToMainMenu = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel
                                                                                target:self
                                                                                action:@selector(backToMainMenuClick:)];
@@ -78,11 +77,6 @@ static NSString *const faveIcon = @"placeToVisitIcon";
 
 -(void)backToMainMenuClick:(UIBarButtonItem*)item
 {
-    NSLog(@"Cancel");
-//    UIViewController *newViewController = [KMD_StartScreenViewController new];
-//    [self presentViewController:newViewController animated:YES completion:^{
-//        NSLog(@"Transition");
-//    }];
     [self.navigationController popToRootViewControllerAnimated:YES];
 }
 

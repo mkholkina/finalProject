@@ -89,66 +89,19 @@ static NSString *const settingsButtonImage = @"button3";
 -(void)createNewTripButtonClick
 {
     NSLog(@"Creating...");
-    [self transitionAnimation];
     UIViewController *newViewController = [KMD_StartNewTripViewController new];
-//    [self presentViewController:newViewController animated:YES completion:^{
-//        NSLog(@"Transition");
-//    }];
     [self.navigationController pushViewController:newViewController animated:YES];
 }
 
 -(void)openExistingTripButtonClick
 {
     NSLog(@"Opening...");
-    //[self transitionAnimation];
     UIViewController *newViewController = [KMD_PreviousTripsViewController new];
-//    [self presentViewController:newViewController animated:[self transitionAnimation] completion:^{
-//        NSLog(@"Transition");
-//    }];
     [self.navigationController pushViewController:newViewController animated:YES];
 }
 
 -(void)openSettingsButtonClick
 {
     NSLog(@"Settings...");
-}
-
--(bool)transitionAnimation
-{
-    CABasicAnimation *firstButtonAnimation;
-    firstButtonAnimation = [CABasicAnimation animationWithKeyPath:@"position"];
-    firstButtonAnimation.duration = 1.0;
-    firstButtonAnimation.fromValue = [NSValue valueWithCGPoint:CGPointMake(self.createNewTripButton.center.x,
-                                                                           self.createNewTripButton.center.y)];
-    firstButtonAnimation.toValue = [NSValue valueWithCGPoint:CGPointMake(CGRectGetWidth(self.view.frame) + buttonWidth,
-                                                                         self.createNewTripButton.center.y)];
-    [self.createNewTripButton.layer addAnimation:firstButtonAnimation forKey:@"animatePosition"];
-    
-    CABasicAnimation *secondButtonAnimation;
-    secondButtonAnimation = [CABasicAnimation animationWithKeyPath:@"position"];
-    secondButtonAnimation.duration = 1.0;
-    secondButtonAnimation.fromValue = [NSValue valueWithCGPoint:CGPointMake(self.openExistingTripButton.center.x,
-                                                                           self.openExistingTripButton.center.y)];
-    secondButtonAnimation.toValue = [NSValue valueWithCGPoint:CGPointMake(0 - buttonWidth,
-                                                                         self.openExistingTripButton.center.y)];
-    [self.openExistingTripButton.layer addAnimation:secondButtonAnimation forKey:@"animatePosition"];
-    
-    CABasicAnimation *thirdButtonAnimation;
-    thirdButtonAnimation = [CABasicAnimation animationWithKeyPath:@"position"];
-    thirdButtonAnimation.duration = 1.0;
-    thirdButtonAnimation.fromValue = [NSValue valueWithCGPoint:CGPointMake(self.openSettingsButton.center.x,
-                                                                           self.openSettingsButton.center.y)];
-    thirdButtonAnimation.toValue = [NSValue valueWithCGPoint:CGPointMake(CGRectGetWidth(self.view.frame) + buttonWidth,
-                                                                         self.openSettingsButton.center.y)];
-    [self.openSettingsButton.layer addAnimation:thirdButtonAnimation forKey:@"animatePosition"];
-    
-    return YES;
-//    CABasicAnimation *opacityAnimation = [CABasicAnimation animationWithKeyPath:@"opacity"];
-//    opacityAnimation.autoreverses = YES;
-//    [opacityAnimation setFromValue:[NSNumber numberWithInt:1]];
-//    [opacityAnimation setToValue:[NSNumber numberWithInt:0]];
-//    opacityAnimation.duration = 10.0;
-//    opacityAnimation.beginTime = 2.0;
-    
 }
 @end

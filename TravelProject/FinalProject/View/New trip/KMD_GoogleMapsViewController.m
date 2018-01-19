@@ -82,7 +82,6 @@
     GMSMarker *marker = [[GMSMarker alloc] init];
     marker.position = CLLocationCoordinate2DMake(latitude, longitude);
     marker.title = title;
-    //marker.snippet = snippet;
     marker.map = mapView;
 }
 

@@ -10,6 +10,7 @@
 #import "AppDelegate.h"
 #import "CoordinatesForGMaps.h"
 
+static NSString *const urlFormatString = @"https://maps.googleapis.com/maps/api/geocode/json?address=%@&key=AIzaSyChKzhkDLESPzhlAzZR1TMFdawzvg2JzuM";
 
 @implementation KMD_WorkWithCoreData
 
@@ -56,13 +57,12 @@
                                                     coordinates.latitude = [str doubleValue];
                                                     str = json[@"results"][0][@"geometry"][@"location"][@"lng"];
                                                     coordinates.longitude = [str doubleValue];
-                                                    NSLog(@"Result: %@ %f , %f", inputPoint, coordinates.latitude, coordinates.longitude);
                                                     [self updateCoreDataItemWithCoordinates:coordinates
                                                                               useIdentifier:identifier];
                                                 }
                                                 else
                                                 {
-                                                    NSLog(@"Error occured! (%@ : %@)", inputPoint, error);
+                                                    NSLog(@"Error occured!");
                                                 }
                                             }];
     [dataTask resume];
@@ -78,7 +78,6 @@
     {
         NSLog(@"не удалось выполнить fetch request");
         NSLog(@"%@, %@", error, error.localizedDescription);
-        abort();
     }
 
     NSInteger lastIndex = [resultArray count];
@@ -100,7 +99,6 @@
         NSLog(@"Не удалось сохранить объект");
         NSLog(@"%@, %@", errors, errors.localizedDescription);
     }
-    NSLog(@"Сохранено: \n %@ \n %@", object.startPoint, object.finishPoint);
 }
 
 //возвращает последний загруженный в CoreData маршрут
@@ -145,7 +143,7 @@
     {
         address = [address stringByAppendingFormat:@"+%@",tmp];
     }
-    NSString *generatedURL = [NSString stringWithFormat:@"https://maps.googleapis.com/maps/api/geocode/json?address=%@&key=AIzaSyChKzhkDLESPzhlAzZR1TMFdawzvg2JzuM", address];
+    NSString *generatedURL = [NSString stringWithFormat:urlFormatString, address];
     return generatedURL;
 }
 

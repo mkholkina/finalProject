@@ -1,14 +1,14 @@
 //
-//  tempViewController.m
+//  KMD_TempViewController.m
 //  FinalProject
 //
-//  Created by Masha on 13.01.2018.
+//  Created by Masha on 19.01.2018.
 //  Copyright © 2018 Kholkina Maria. All rights reserved.
 //
 
-#import "tempViewController.h"
+#import "KMD_TempViewController.h"
 
-@interface tempViewController ()
+@interface KMD_TempViewController ()
 
 @property (nonatomic, strong) UIImageView *backgroundImage;
 
@@ -16,10 +16,10 @@
 
 static NSString *const backgroundImage2 = @"test1";
 
-@implementation tempViewController
+@implementation KMD_TempViewController
 
 - (void)viewDidLoad {
-    [super viewDidLoad]; 
+    [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
     
     self.backgroundImage = [[UIImageView alloc] initWithImage:[UIImage imageNamed:backgroundImage2]];

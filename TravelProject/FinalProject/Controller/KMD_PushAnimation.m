@@ -47,8 +47,10 @@ static NSString *const animationPicture = @"loadingPic";
         posAnimation.duration = 0.5;
         posAnimation.repeatCount = 10;
         posAnimation.autoreverses = YES;
-        posAnimation.fromValue = [NSValue valueWithCGPoint:CGPointMake(CGRectGetWidth(self.transitionView.frame)/2, CGRectGetHeight(self.transitionView.frame)/2)];
-        posAnimation.toValue = [NSValue valueWithCGPoint:CGPointMake(CGRectGetWidth(self.transitionView.frame)/2, CGRectGetHeight(self.transitionView.frame)/2 - 50)];
+        posAnimation.fromValue = [NSValue valueWithCGPoint:CGPointMake(CGRectGetWidth(self.transitionView.frame)/2,
+                                                                       CGRectGetHeight(self.transitionView.frame)/2)];
+        posAnimation.toValue = [NSValue valueWithCGPoint:CGPointMake(CGRectGetWidth(self.transitionView.frame)/2,
+                                                                     CGRectGetHeight(self.transitionView.frame)/2 - 50)];
         [self.planeImage.layer addAnimation:posAnimation forKey:nil];
         self.transitionView.alpha = 0.0;
     } completion:^(BOOL finished){
