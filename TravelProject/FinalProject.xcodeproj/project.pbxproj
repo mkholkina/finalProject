@@ -10,22 +10,28 @@
 		19696E6C1DDF83059F58DFF3 /* libPods-FinalProjectTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 59BDC64749EBAAAA43F2ADC3 /* libPods-FinalProjectTests.a */; };
 		4F482AB53D8D5573A4D2EE4D /* libPods-FinalProjectUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D3809DF4327232B964D615FA /* libPods-FinalProjectUITests.a */; };
 		C2EEA94E5644C14BD5664551 /* libPods-FinalProject.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1914546756AC65604E71423B /* libPods-FinalProject.a */; };
+		C72AB864200F604700D1CA03 /* KMD_StartScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C72AB863200F604700D1CA03 /* KMD_StartScreenViewController.m */; };
+		C72AB867200F692400D1CA03 /* KMD_StartNewTripViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C72AB866200F692400D1CA03 /* KMD_StartNewTripViewController.m */; };
+		C72AB86A200F721000D1CA03 /* KMD_NewTripMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C72AB869200F721000D1CA03 /* KMD_NewTripMainViewController.m */; };
+		C72AB86D200F72DE00D1CA03 /* KMD_GoogleMapsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C72AB86C200F72DE00D1CA03 /* KMD_GoogleMapsViewController.m */; };
+		C72AB870200F79C100D1CA03 /* KMD_WorkWithCoreData.m in Sources */ = {isa = PBXBuildFile; fileRef = C72AB86F200F79C100D1CA03 /* KMD_WorkWithCoreData.m */; };
 		C738EA141FFCF85B0083DFBC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C738EA131FFCF85B0083DFBC /* AppDelegate.m */; };
 		C738EA1D1FFCF85C0083DFBC /* FinalProject.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C738EA1B1FFCF85C0083DFBC /* FinalProject.xcdatamodeld */; };
 		C738EA1F1FFCF85C0083DFBC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C738EA1E1FFCF85C0083DFBC /* Assets.xcassets */; };
 		C738EA251FFCF85C0083DFBC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C738EA241FFCF85C0083DFBC /* main.m */; };
 		C738EA2F1FFCF85C0083DFBC /* FinalProjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C738EA2E1FFCF85C0083DFBC /* FinalProjectTests.m */; };
 		C738EA3A1FFCF85C0083DFBC /* FinalProjectUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = C738EA391FFCF85C0083DFBC /* FinalProjectUITests.m */; };
-		C738EA8420062A950083DFBC /* StartScreenView.m in Sources */ = {isa = PBXBuildFile; fileRef = C738EA8320062A950083DFBC /* StartScreenView.m */; };
-		C738EA8F20064A760083DFBC /* NewTripMainScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = C738EA8E20064A760083DFBC /* NewTripMainScreen.m */; };
-		C738EA9220064BCC0083DFBC /* StartNewTripScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = C738EA9120064BCC0083DFBC /* StartNewTripScreen.m */; };
-		C75F17C8200A974F0030E3B3 /* NewTripActions.m in Sources */ = {isa = PBXBuildFile; fileRef = C75F17C7200A974F0030E3B3 /* NewTripActions.m */; };
+		C74147F520128033003C633F /* WorkWithCoreDataTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C74147F420128033003C633F /* WorkWithCoreDataTests.m */; };
+		C75C5E4E2011673B00E2CD8C /* KMD_PushAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = C75C5E4D2011673B00E2CD8C /* KMD_PushAnimation.m */; };
+		C75C5E52201167C700E2CD8C /* KMD_PopAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = C75C5E51201167C700E2CD8C /* KMD_PopAnimation.m */; };
 		C75F17CB200A990F0030E3B3 /* tempViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C75F17CA200A990F0030E3B3 /* tempViewController.m */; };
-		C75F17CE200A997B0030E3B3 /* GMapsController.m in Sources */ = {isa = PBXBuildFile; fileRef = C75F17CD200A997B0030E3B3 /* GMapsController.m */; };
 		C75F1860200BF19F0030E3B3 /* CoordinatesForGMaps.m in Sources */ = {isa = PBXBuildFile; fileRef = C75F185F200BF19E0030E3B3 /* CoordinatesForGMaps.m */; };
 		C7731B11200D4F320067C1B2 /* Points+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = C7731B0B200D4F320067C1B2 /* Points+CoreDataProperties.m */; };
 		C7731B12200D4F320067C1B2 /* Routes+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = C7731B0E200D4F320067C1B2 /* Routes+CoreDataClass.m */; };
 		C7731B13200D4F320067C1B2 /* Routes+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = C7731B0F200D4F320067C1B2 /* Routes+CoreDataProperties.m */; };
+		C7EA245A2010BBB100256648 /* KMD_PreviousTripsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C7EA24592010BBB100256648 /* KMD_PreviousTripsViewController.m */; };
+		C7EA245D2010BDB500256648 /* KMD_PreviousTripsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C7EA245C2010BDB500256648 /* KMD_PreviousTripsTableViewCell.m */; };
+		C7EA246420110A8D00256648 /* KMD_NavigationControllerDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C7EA246320110A8D00256648 /* KMD_NavigationControllerDelegate.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +49,13 @@
 			remoteGlobalIDString = C738EA0E1FFCF85B0083DFBC;
 			remoteInfo = FinalProject;
 		};
+		C74147F720128033003C633F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C738EA071FFCF85B0083DFBC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C738EA0E1FFCF85B0083DFBC;
+			remoteInfo = FinalProject;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -53,6 +66,16 @@
 		8957AC3673141D7CE1EE2061 /* Pods-FinalProjectTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FinalProjectTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FinalProjectTests/Pods-FinalProjectTests.debug.xcconfig"; sourceTree = "<group>"; };
 		9396DB7B15ABCB1EA308AC95 /* Pods-FinalProjectUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FinalProjectUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FinalProjectUITests/Pods-FinalProjectUITests.release.xcconfig"; sourceTree = "<group>"; };
 		BF1712D5FE8D7AE4B293F389 /* Pods-FinalProjectUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FinalProjectUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FinalProjectUITests/Pods-FinalProjectUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		C72AB862200F604700D1CA03 /* KMD_StartScreenViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KMD_StartScreenViewController.h; sourceTree = "<group>"; };
+		C72AB863200F604700D1CA03 /* KMD_StartScreenViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KMD_StartScreenViewController.m; sourceTree = "<group>"; };
+		C72AB865200F692400D1CA03 /* KMD_StartNewTripViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KMD_StartNewTripViewController.h; sourceTree = "<group>"; };
+		C72AB866200F692400D1CA03 /* KMD_StartNewTripViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KMD_StartNewTripViewController.m; sourceTree = "<group>"; };
+		C72AB868200F721000D1CA03 /* KMD_NewTripMainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KMD_NewTripMainViewController.h; sourceTree = "<group>"; };
+		C72AB869200F721000D1CA03 /* KMD_NewTripMainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KMD_NewTripMainViewController.m; sourceTree = "<group>"; };
+		C72AB86B200F72DE00D1CA03 /* KMD_GoogleMapsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KMD_GoogleMapsViewController.h; sourceTree = "<group>"; };
+		C72AB86C200F72DE00D1CA03 /* KMD_GoogleMapsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KMD_GoogleMapsViewController.m; sourceTree = "<group>"; };
+		C72AB86E200F79C100D1CA03 /* KMD_WorkWithCoreData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KMD_WorkWithCoreData.h; sourceTree = "<group>"; };
+		C72AB86F200F79C100D1CA03 /* KMD_WorkWithCoreData.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KMD_WorkWithCoreData.m; sourceTree = "<group>"; };
 		C738EA0F1FFCF85B0083DFBC /* FinalProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FinalProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C738EA121FFCF85B0083DFBC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C738EA131FFCF85B0083DFBC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -66,18 +89,15 @@
 		C738EA351FFCF85C0083DFBC /* FinalProjectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FinalProjectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C738EA391FFCF85C0083DFBC /* FinalProjectUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FinalProjectUITests.m; sourceTree = "<group>"; };
 		C738EA3B1FFCF85C0083DFBC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C738EA8220062A950083DFBC /* StartScreenView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StartScreenView.h; sourceTree = "<group>"; };
-		C738EA8320062A950083DFBC /* StartScreenView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StartScreenView.m; sourceTree = "<group>"; };
-		C738EA8D20064A760083DFBC /* NewTripMainScreen.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NewTripMainScreen.h; sourceTree = "<group>"; };
-		C738EA8E20064A760083DFBC /* NewTripMainScreen.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NewTripMainScreen.m; sourceTree = "<group>"; };
-		C738EA9020064BCC0083DFBC /* StartNewTripScreen.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StartNewTripScreen.h; sourceTree = "<group>"; };
-		C738EA9120064BCC0083DFBC /* StartNewTripScreen.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StartNewTripScreen.m; sourceTree = "<group>"; };
-		C75F17C6200A974F0030E3B3 /* NewTripActions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NewTripActions.h; sourceTree = "<group>"; };
-		C75F17C7200A974F0030E3B3 /* NewTripActions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NewTripActions.m; sourceTree = "<group>"; };
+		C74147F220128033003C633F /* WorkWithCoreDataTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WorkWithCoreDataTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C74147F420128033003C633F /* WorkWithCoreDataTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WorkWithCoreDataTests.m; sourceTree = "<group>"; };
+		C74147F620128033003C633F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C75C5E4C2011673B00E2CD8C /* KMD_PushAnimation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KMD_PushAnimation.h; sourceTree = "<group>"; };
+		C75C5E4D2011673B00E2CD8C /* KMD_PushAnimation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KMD_PushAnimation.m; sourceTree = "<group>"; };
+		C75C5E50201167C700E2CD8C /* KMD_PopAnimation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KMD_PopAnimation.h; sourceTree = "<group>"; };
+		C75C5E51201167C700E2CD8C /* KMD_PopAnimation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KMD_PopAnimation.m; sourceTree = "<group>"; };
 		C75F17C9200A990F0030E3B3 /* tempViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = tempViewController.h; sourceTree = "<group>"; };
 		C75F17CA200A990F0030E3B3 /* tempViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = tempViewController.m; sourceTree = "<group>"; };
-		C75F17CC200A997B0030E3B3 /* GMapsController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GMapsController.h; sourceTree = "<group>"; };
-		C75F17CD200A997B0030E3B3 /* GMapsController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GMapsController.m; sourceTree = "<group>"; };
 		C75F185E200BF19E0030E3B3 /* CoordinatesForGMaps.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoordinatesForGMaps.h; sourceTree = "<group>"; };
 		C75F185F200BF19E0030E3B3 /* CoordinatesForGMaps.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoordinatesForGMaps.m; sourceTree = "<group>"; };
 		C7731B08200D4F320067C1B2 /* Points+CoreDataProperties.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Points+CoreDataProperties.h"; sourceTree = "<group>"; };
@@ -88,6 +108,12 @@
 		C7731B0D200D4F320067C1B2 /* Routes+CoreDataClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Routes+CoreDataClass.h"; sourceTree = "<group>"; };
 		C7731B0E200D4F320067C1B2 /* Routes+CoreDataClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Routes+CoreDataClass.m"; sourceTree = "<group>"; };
 		C7731B0F200D4F320067C1B2 /* Routes+CoreDataProperties.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Routes+CoreDataProperties.m"; sourceTree = "<group>"; };
+		C7EA24582010BBB100256648 /* KMD_PreviousTripsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KMD_PreviousTripsViewController.h; sourceTree = "<group>"; };
+		C7EA24592010BBB100256648 /* KMD_PreviousTripsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KMD_PreviousTripsViewController.m; sourceTree = "<group>"; };
+		C7EA245B2010BDB500256648 /* KMD_PreviousTripsTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KMD_PreviousTripsTableViewCell.h; sourceTree = "<group>"; };
+		C7EA245C2010BDB500256648 /* KMD_PreviousTripsTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KMD_PreviousTripsTableViewCell.m; sourceTree = "<group>"; };
+		C7EA246220110A8D00256648 /* KMD_NavigationControllerDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KMD_NavigationControllerDelegate.h; sourceTree = "<group>"; };
+		C7EA246320110A8D00256648 /* KMD_NavigationControllerDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KMD_NavigationControllerDelegate.m; sourceTree = "<group>"; };
 		D3809DF4327232B964D615FA /* libPods-FinalProjectUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FinalProjectUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD5B3F82324FD5433A29FA94 /* Pods-FinalProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FinalProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-FinalProject/Pods-FinalProject.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -114,6 +140,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				4F482AB53D8D5573A4D2EE4D /* libPods-FinalProjectUITests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C74147EF20128033003C633F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -149,6 +182,7 @@
 				C738EA111FFCF85B0083DFBC /* FinalProject */,
 				C738EA2D1FFCF85C0083DFBC /* FinalProjectTests */,
 				C738EA381FFCF85C0083DFBC /* FinalProjectUITests */,
+				C74147F320128033003C633F /* WorkWithCoreDataTests */,
 				C738EA101FFCF85B0083DFBC /* Products */,
 				47281A8752668EA33A9565BB /* Pods */,
 				A8FE93BF5C7257271DD06BE8 /* Frameworks */,
@@ -161,6 +195,7 @@
 				C738EA0F1FFCF85B0083DFBC /* FinalProject.app */,
 				C738EA2A1FFCF85C0083DFBC /* FinalProjectTests.xctest */,
 				C738EA351FFCF85C0083DFBC /* FinalProjectUITests.xctest */,
+				C74147F220128033003C633F /* WorkWithCoreDataTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -217,9 +252,10 @@
 		C738EA481FFCFE100083DFBC /* View */ = {
 			isa = PBXGroup;
 			children = (
-				C738EA8220062A950083DFBC /* StartScreenView.h */,
-				C738EA8320062A950083DFBC /* StartScreenView.m */,
+				C72AB862200F604700D1CA03 /* KMD_StartScreenViewController.h */,
+				C72AB863200F604700D1CA03 /* KMD_StartScreenViewController.m */,
 				C738EA892006472C0083DFBC /* New trip */,
+				C75C5E4F2011674700E2CD8C /* Previous trips */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -229,8 +265,14 @@
 			children = (
 				C738EA121FFCF85B0083DFBC /* AppDelegate.h */,
 				C738EA131FFCF85B0083DFBC /* AppDelegate.m */,
-				C75F17C6200A974F0030E3B3 /* NewTripActions.h */,
-				C75F17C7200A974F0030E3B3 /* NewTripActions.m */,
+				C72AB86E200F79C100D1CA03 /* KMD_WorkWithCoreData.h */,
+				C72AB86F200F79C100D1CA03 /* KMD_WorkWithCoreData.m */,
+				C7EA246220110A8D00256648 /* KMD_NavigationControllerDelegate.h */,
+				C7EA246320110A8D00256648 /* KMD_NavigationControllerDelegate.m */,
+				C75C5E50201167C700E2CD8C /* KMD_PopAnimation.h */,
+				C75C5E51201167C700E2CD8C /* KMD_PopAnimation.m */,
+				C75C5E4C2011673B00E2CD8C /* KMD_PushAnimation.h */,
+				C75C5E4D2011673B00E2CD8C /* KMD_PushAnimation.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -246,16 +288,37 @@
 		C738EA892006472C0083DFBC /* New trip */ = {
 			isa = PBXGroup;
 			children = (
-				C738EA9020064BCC0083DFBC /* StartNewTripScreen.h */,
-				C738EA9120064BCC0083DFBC /* StartNewTripScreen.m */,
-				C738EA8D20064A760083DFBC /* NewTripMainScreen.h */,
-				C738EA8E20064A760083DFBC /* NewTripMainScreen.m */,
+				C72AB865200F692400D1CA03 /* KMD_StartNewTripViewController.h */,
+				C72AB866200F692400D1CA03 /* KMD_StartNewTripViewController.m */,
+				C72AB868200F721000D1CA03 /* KMD_NewTripMainViewController.h */,
+				C72AB869200F721000D1CA03 /* KMD_NewTripMainViewController.m */,
 				C75F17C9200A990F0030E3B3 /* tempViewController.h */,
 				C75F17CA200A990F0030E3B3 /* tempViewController.m */,
-				C75F17CC200A997B0030E3B3 /* GMapsController.h */,
-				C75F17CD200A997B0030E3B3 /* GMapsController.m */,
+				C72AB86B200F72DE00D1CA03 /* KMD_GoogleMapsViewController.h */,
+				C72AB86C200F72DE00D1CA03 /* KMD_GoogleMapsViewController.m */,
 			);
 			path = "New trip";
+			sourceTree = "<group>";
+		};
+		C74147F320128033003C633F /* WorkWithCoreDataTests */ = {
+			isa = PBXGroup;
+			children = (
+				C74147F420128033003C633F /* WorkWithCoreDataTests.m */,
+				C74147F620128033003C633F /* Info.plist */,
+			);
+			path = WorkWithCoreDataTests;
+			sourceTree = "<group>";
+		};
+		C75C5E4F2011674700E2CD8C /* Previous trips */ = {
+			isa = PBXGroup;
+			children = (
+				C7EA24582010BBB100256648 /* KMD_PreviousTripsViewController.h */,
+				C7EA24592010BBB100256648 /* KMD_PreviousTripsViewController.m */,
+				C7EA245B2010BDB500256648 /* KMD_PreviousTripsTableViewCell.h */,
+				C7EA245C2010BDB500256648 /* KMD_PreviousTripsTableViewCell.m */,
+			);
+			name = "Previous trips";
+			path = "New Group";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -323,6 +386,24 @@
 			productReference = C738EA351FFCF85C0083DFBC /* FinalProjectUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		C74147F120128033003C633F /* WorkWithCoreDataTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C74147FB20128033003C633F /* Build configuration list for PBXNativeTarget "WorkWithCoreDataTests" */;
+			buildPhases = (
+				C74147EE20128033003C633F /* Sources */,
+				C74147EF20128033003C633F /* Frameworks */,
+				C74147F020128033003C633F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C74147F820128033003C633F /* PBXTargetDependency */,
+			);
+			name = WorkWithCoreDataTests;
+			productName = WorkWithCoreDataTests;
+			productReference = C74147F220128033003C633F /* WorkWithCoreDataTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -346,6 +427,11 @@
 						ProvisioningStyle = Automatic;
 						TestTargetID = C738EA0E1FFCF85B0083DFBC;
 					};
+					C74147F120128033003C633F = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = C738EA0E1FFCF85B0083DFBC;
+					};
 				};
 			};
 			buildConfigurationList = C738EA0A1FFCF85B0083DFBC /* Build configuration list for PBXProject "FinalProject" */;
@@ -364,6 +450,7 @@
 				C738EA0E1FFCF85B0083DFBC /* FinalProject */,
 				C738EA291FFCF85C0083DFBC /* FinalProjectTests */,
 				C738EA341FFCF85C0083DFBC /* FinalProjectUITests */,
+				C74147F120128033003C633F /* WorkWithCoreDataTests */,
 			);
 		};
 /* End PBXProject section */
@@ -385,6 +472,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		C738EA331FFCF85C0083DFBC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C74147F020128033003C633F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -550,19 +644,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C72AB867200F692400D1CA03 /* KMD_StartNewTripViewController.m in Sources */,
+				C75C5E4E2011673B00E2CD8C /* KMD_PushAnimation.m in Sources */,
+				C7EA245A2010BBB100256648 /* KMD_PreviousTripsViewController.m in Sources */,
+				C75C5E52201167C700E2CD8C /* KMD_PopAnimation.m in Sources */,
 				C7731B12200D4F320067C1B2 /* Routes+CoreDataClass.m in Sources */,
+				C7EA246420110A8D00256648 /* KMD_NavigationControllerDelegate.m in Sources */,
 				C7731B11200D4F320067C1B2 /* Points+CoreDataProperties.m in Sources */,
 				C7731B13200D4F320067C1B2 /* Routes+CoreDataProperties.m in Sources */,
 				C75F17CB200A990F0030E3B3 /* tempViewController.m in Sources */,
-				C738EA8F20064A760083DFBC /* NewTripMainScreen.m in Sources */,
-				C75F17CE200A997B0030E3B3 /* GMapsController.m in Sources */,
-				C738EA8420062A950083DFBC /* StartScreenView.m in Sources */,
+				C72AB864200F604700D1CA03 /* KMD_StartScreenViewController.m in Sources */,
 				C75F1860200BF19F0030E3B3 /* CoordinatesForGMaps.m in Sources */,
 				C738EA141FFCF85B0083DFBC /* AppDelegate.m in Sources */,
-				C75F17C8200A974F0030E3B3 /* NewTripActions.m in Sources */,
+				C72AB86A200F721000D1CA03 /* KMD_NewTripMainViewController.m in Sources */,
+				C7EA245D2010BDB500256648 /* KMD_PreviousTripsTableViewCell.m in Sources */,
+				C72AB870200F79C100D1CA03 /* KMD_WorkWithCoreData.m in Sources */,
 				C738EA251FFCF85C0083DFBC /* main.m in Sources */,
-				C738EA9220064BCC0083DFBC /* StartNewTripScreen.m in Sources */,
 				C738EA1D1FFCF85C0083DFBC /* FinalProject.xcdatamodeld in Sources */,
+				C72AB86D200F72DE00D1CA03 /* KMD_GoogleMapsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -582,6 +681,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		C74147EE20128033003C633F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C74147F520128033003C633F /* WorkWithCoreDataTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -594,6 +701,11 @@
 			isa = PBXTargetDependency;
 			target = C738EA0E1FFCF85B0083DFBC /* FinalProject */;
 			targetProxy = C738EA361FFCF85C0083DFBC /* PBXContainerItemProxy */;
+		};
+		C74147F820128033003C633F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C738EA0E1FFCF85B0083DFBC /* FinalProject */;
+			targetProxy = C74147F720128033003C633F /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -790,6 +902,34 @@
 			};
 			name = Release;
 		};
+		C74147F920128033003C633F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = WorkWithCoreDataTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "-.WorkWithCoreDataTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FinalProject.app/FinalProject";
+			};
+			name = Debug;
+		};
+		C74147FA20128033003C633F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = WorkWithCoreDataTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "-.WorkWithCoreDataTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FinalProject.app/FinalProject";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -825,6 +965,15 @@
 			buildConfigurations = (
 				C738EA451FFCF85C0083DFBC /* Debug */,
 				C738EA461FFCF85C0083DFBC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C74147FB20128033003C633F /* Build configuration list for PBXNativeTarget "WorkWithCoreDataTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C74147F920128033003C633F /* Debug */,
+				C74147FA20128033003C633F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

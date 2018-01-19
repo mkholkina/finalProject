@@ -23,4 +23,5 @@ target 'FinalProject' do
   pod 'GooglePlaces'
   pod 'GooglePlacePicker'
   pod 'GoogleMaps'
+  pod 'OCMock', '~> 3.4.1'
 end

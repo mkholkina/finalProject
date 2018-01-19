@@ -7,22 +7,37 @@
 //
 
 #import "AppDelegate.h"
-#import "StartScreenView.h"
+#import "KMD_StartScreenViewController.h"
+#import "KMD_NavigationControllerDelegate.h"
 
 @interface AppDelegate ()
 
+@property (nonatomic,strong) id <UINavigationControllerDelegate> globalNavBarDelegate;
+
+
 @end
+
+NSString * const googleMapsKey = @"AIzaSyBL2GP-ueCsf6iPkwdCfVze34QEnq6VYJw";
+NSString * const googlePlacesKey = @"AIzaSyAIVjpv3NFjtakCw_0Fq1xFzEF_tmYNdvc";
 
 @implementation AppDelegate
 
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+{
     self.window = [UIWindow new];
     
-    [GMSServices provideAPIKey:@"AIzaSyBL2GP-ueCsf6iPkwdCfVze34QEnq6VYJw"];
-    [GMSPlacesClient provideAPIKey:@"AIzaSyAIVjpv3NFjtakCw_0Fq1xFzEF_tmYNdvc"];
+    [GMSServices provideAPIKey: googleMapsKey];
+    [GMSPlacesClient provideAPIKey: googlePlacesKey];
     
-    StartScreenView *rootViewController = [StartScreenView new];
-    self.window.rootViewController = rootViewController;
+    KMD_StartScreenViewController *rootViewController = [KMD_StartScreenViewController new];
+    //self.window.rootViewController = rootViewController;
+    
+    UINavigationController *navigationControl = [[UINavigationController alloc]
+                                                 initWithRootViewController:rootViewController];
+    self.globalNavBarDelegate = [KMD_NavigationControllerDelegate new];
+    navigationControl.delegate = self.globalNavBarDelegate;
+
+    self.window.rootViewController = navigationControl;
     [self.window makeKeyAndVisible];
     return YES;
 }

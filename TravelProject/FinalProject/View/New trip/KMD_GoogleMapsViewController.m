@@ -1,28 +1,37 @@
 //
-//  GMapsController.m
+//  KMD_GoogleMapsViewController.m
 //  FinalProject
 //
-//  Created by Masha on 13.01.2018.
+//  Created by Masha on 17.01.2018.
 //  Copyright © 2018 Kholkina Maria. All rights reserved.
 //
 
-#import "GMapsController.h"
+#import "KMD_GoogleMapsViewController.h"
+#import <GoogleMaps/GoogleMaps.h>
+#import "CoordinatesForGMaps.h"
+#import "Routes+CoreDataClass.h"
+#import "Points+CoreDataClass.h"
+#import "KMD_WorkWithCoreData.h"
 
-@interface GMapsController ()
+@interface KMD_GoogleMapsViewController ()
+
+@property (nonatomic, strong) KMD_WorkWithCoreData *workWithCoreData;
 
 @end
 
-@implementation GMapsController
+@implementation KMD_GoogleMapsViewController
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
 }
 
-- (void)loadView {
-    self.workWithNewTrip = [NewTripActions new];
+- (void)loadView
+{
+    self.workWithCoreData = [KMD_WorkWithCoreData new];
     
     //загружаем из CoreData последний маршрут
-    Routes *route = [self.workWithNewTrip NewRouteInfo];
+    Routes *route = [self.workWithCoreData newRouteInfo];
     NSLog(@"search %@ with coordinates: %f, %f", route.startPoint.name, route.startPoint.latitude,
           route.startPoint.longitude);
     
@@ -65,6 +74,7 @@
     [self addPath:pathCoords toMapView:mapView];
 }
 
+//установка маркера
 -(void)addMarkerToMapView:(GMSMapView *)mapView withLatitude:(double)latitude
              andLongitude:(double)longitude setTitle:(NSString *)title
 {
@@ -93,4 +103,5 @@
     GMSPolyline *polyline = [GMSPolyline polylineWithPath:path];
     polyline.map = mapView;
 }
+
 @end

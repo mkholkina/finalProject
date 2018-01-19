@@ -7,13 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "NewTripActions.h"
-#import "CoordinatesForGMaps.h"
 
 @interface tempViewController : UIViewController
 
-//@property (nonatomic, strong) UILabel *routeInfoLabel;
-//@property (nonatomic, strong) NewTripActions *workWithNewTrip;
-//@property (nonatomic, strong) CoordinatesForGMaps *coordinates;
 
 @end
