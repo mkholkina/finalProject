@@ -7,9 +7,21 @@
 //
 
 #import <XCTest/XCTest.h>
+#import "OCMock.h"
+#import "KMD_WorkWithCoreData.h"
+#import "KMD_StartNewTripViewController.h"
 
 @interface FinalProjectTests : XCTestCase
 
+@property (nonatomic,strong) KMD_WorkWithCoreData *workWithCoreData;
+
+@end
+
+@interface KMD_WorkWithCoreData(Testing)
+-(void)savingRoute:(NSString *)startPoint toPoint:(NSString *)finishPoint;
+-(Routes *)newRouteInfo;
+-(NSArray *)listOfRoutes;
+-(NSString *)generateURL:(NSString *)inputPoint;
 @end
 
 @implementation FinalProjectTests
@@ -24,16 +36,14 @@
     [super tearDown];
 }
 
-- (void)testExample {
-    // This is an example of a functional test case.
-    // Use XCTAssert and related functions to verify your tests produce the correct results.
+- (void)testGenerateURL
+{
+    NSString *expectedURL1 = @"https://maps.googleapis.com/maps/api/geocode/json?address=+Moscow&key=AIzaSyChKzhkDLESPzhlAzZR1TMFdawzvg2JzuM";
+    NSString *expectedURL2 = @"https://maps.googleapis.com/maps/api/geocode/json?address=+Saint+Petersburg,+Russia&key=AIzaSyChKzhkDLESPzhlAzZR1TMFdawzvg2JzuM";
+    OCMExpect([self.workWithCoreData generateURL:@"Moscow"]).andReturn(expectedURL1);
+    OCMExpect([self.workWithCoreData generateURL:@"Saint Petersburg, Russia"]).andReturn(expectedURL2);
 }
 
-- (void)testPerformanceExample {
-    // This is an example of a performance test case.
-    [self measureBlock:^{
-        // Put the code you want to measure the time of here.
-    }];
-}
 
 @end
+

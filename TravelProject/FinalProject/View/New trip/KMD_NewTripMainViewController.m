@@ -41,10 +41,10 @@ static NSString *const faveIcon = @"placeToVisitIcon";
     self.mapController = [KMD_GoogleMapsViewController new];
     self.tmpController = [KMD_TempViewController new];
 
-    UITabBarItem *tmpTabBarItem = [[UITabBarItem alloc] initWithTitle:@"route"
+    UITabBarItem *tmpTabBarItem = [[UITabBarItem alloc] initWithTitle:@"visit"
                                                                 image:[UIImage imageNamed:faveIcon]
                                                         selectedImage:[UIImage imageNamed:faveIcon]];
-    UITabBarItem *mapTabBarItem = [[UITabBarItem alloc] initWithTitle:@"visit"
+    UITabBarItem *mapTabBarItem = [[UITabBarItem alloc] initWithTitle:@"route"
                                                                 image:[UIImage imageNamed:routeIcon]
                                                         selectedImage:[UIImage imageNamed:routeIcon]];
     

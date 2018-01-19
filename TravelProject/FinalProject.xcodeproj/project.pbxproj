@@ -21,7 +21,6 @@
 		C738EA251FFCF85C0083DFBC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C738EA241FFCF85C0083DFBC /* main.m */; };
 		C738EA2F1FFCF85C0083DFBC /* FinalProjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C738EA2E1FFCF85C0083DFBC /* FinalProjectTests.m */; };
 		C738EA3A1FFCF85C0083DFBC /* FinalProjectUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = C738EA391FFCF85C0083DFBC /* FinalProjectUITests.m */; };
-		C74147F520128033003C633F /* WorkWithCoreDataTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C74147F420128033003C633F /* WorkWithCoreDataTests.m */; };
 		C74147FE20129367003C633F /* KMD_TempViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C74147FD20129367003C633F /* KMD_TempViewController.m */; };
 		C75C5E4E2011673B00E2CD8C /* KMD_PushAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = C75C5E4D2011673B00E2CD8C /* KMD_PushAnimation.m */; };
 		C75C5E52201167C700E2CD8C /* KMD_PopAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = C75C5E51201167C700E2CD8C /* KMD_PopAnimation.m */; };
@@ -90,8 +89,6 @@
 		C738EA391FFCF85C0083DFBC /* FinalProjectUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FinalProjectUITests.m; sourceTree = "<group>"; };
 		C738EA3B1FFCF85C0083DFBC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C74147F220128033003C633F /* WorkWithCoreDataTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WorkWithCoreDataTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		C74147F420128033003C633F /* WorkWithCoreDataTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WorkWithCoreDataTests.m; sourceTree = "<group>"; };
-		C74147F620128033003C633F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C74147FC20129367003C633F /* KMD_TempViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KMD_TempViewController.h; sourceTree = "<group>"; };
 		C74147FD20129367003C633F /* KMD_TempViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KMD_TempViewController.m; sourceTree = "<group>"; };
 		C75C5E4C2011673B00E2CD8C /* KMD_PushAnimation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KMD_PushAnimation.h; sourceTree = "<group>"; };
@@ -182,7 +179,6 @@
 				C738EA111FFCF85B0083DFBC /* FinalProject */,
 				C738EA2D1FFCF85C0083DFBC /* FinalProjectTests */,
 				C738EA381FFCF85C0083DFBC /* FinalProjectUITests */,
-				C74147F320128033003C633F /* WorkWithCoreDataTests */,
 				C738EA101FFCF85B0083DFBC /* Products */,
 				47281A8752668EA33A9565BB /* Pods */,
 				A8FE93BF5C7257271DD06BE8 /* Frameworks */,
@@ -298,15 +294,6 @@
 				C74147FD20129367003C633F /* KMD_TempViewController.m */,
 			);
 			path = "New trip";
-			sourceTree = "<group>";
-		};
-		C74147F320128033003C633F /* WorkWithCoreDataTests */ = {
-			isa = PBXGroup;
-			children = (
-				C74147F420128033003C633F /* WorkWithCoreDataTests.m */,
-				C74147F620128033003C633F /* Info.plist */,
-			);
-			path = WorkWithCoreDataTests;
 			sourceTree = "<group>";
 		};
 		C75C5E4F2011674700E2CD8C /* Previous trips */ = {
@@ -685,7 +672,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C74147F520128033003C633F /* WorkWithCoreDataTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
