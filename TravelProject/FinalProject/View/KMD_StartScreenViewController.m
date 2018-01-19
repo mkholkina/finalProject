@@ -37,7 +37,6 @@ static NSString *const settingsButtonImage = @"button3";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    NSLog(@"Start");
     [self.navigationController setNavigationBarHidden:YES];
     //background
     
@@ -88,14 +87,12 @@ static NSString *const settingsButtonImage = @"button3";
 
 -(void)createNewTripButtonClick
 {
-    NSLog(@"Creating...");
     UIViewController *newViewController = [KMD_StartNewTripViewController new];
     [self.navigationController pushViewController:newViewController animated:YES];
 }
 
 -(void)openExistingTripButtonClick
 {
-    NSLog(@"Opening...");
     UIViewController *newViewController = [KMD_PreviousTripsViewController new];
     [self.navigationController pushViewController:newViewController animated:YES];
 }

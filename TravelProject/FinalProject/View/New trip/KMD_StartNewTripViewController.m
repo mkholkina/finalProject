@@ -86,7 +86,6 @@ const CGFloat itemOffset = 2*10.0f;
 
 -(void)addRouteButtonClick
 {
-    NSLog(@"Saving...");
     [self.workWithCoreData savingRoute:self.chooseStartPointTextField.text
                                     toPoint:self.chooseFinishPointTextField.text];
     UIViewController *newViewController = [KMD_NewTripMainViewController new];

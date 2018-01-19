@@ -17,6 +17,7 @@
 @end
 
 static NSString *const animationPicture = @"loadingPic";
+const CGFloat picSize = 40.0f;
 
 @implementation KMD_PushAnimation
 
@@ -30,7 +31,7 @@ static NSString *const animationPicture = @"loadingPic";
     UIView *containerView = transitionContext.containerView;
     
     self.planeImage = [[UIImageView alloc] initWithImage:[UIImage imageNamed:animationPicture]];
-    self.planeImage.frame = CGRectMake(0, 0, 20, 20);
+    self.planeImage.frame = CGRectMake(0, 0, picSize, picSize);
     [self.planeImage setContentMode:UIViewContentModeScaleToFill];
     
     self.transitionView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(containerView.frame), CGRectGetHeight(containerView.frame))];
@@ -50,7 +51,8 @@ static NSString *const animationPicture = @"loadingPic";
         posAnimation.fromValue = [NSValue valueWithCGPoint:CGPointMake(CGRectGetWidth(self.transitionView.frame)/2,
                                                                        CGRectGetHeight(self.transitionView.frame)/2)];
         posAnimation.toValue = [NSValue valueWithCGPoint:CGPointMake(CGRectGetWidth(self.transitionView.frame)/2,
-                                                                     CGRectGetHeight(self.transitionView.frame)/2 - 50)];
+                                                                     CGRectGetHeight(self.transitionView.frame)/2 -
+                                                                     picSize)];
         [self.planeImage.layer addAnimation:posAnimation forKey:nil];
         self.transitionView.alpha = 0.0;
     } completion:^(BOOL finished){

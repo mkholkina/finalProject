@@ -32,8 +32,6 @@
     
     //загружаем из CoreData последний маршрут
     Routes *route = [self.workWithCoreData newRouteInfo];
-    NSLog(@"search %@ with coordinates: %f, %f", route.startPoint.name, route.startPoint.latitude,
-          route.startPoint.longitude);
     
     //установка изначального положения камеры
     GMSCameraPosition *camera = [GMSCameraPosition cameraWithLatitude:route.startPoint.latitude
@@ -46,7 +44,6 @@
     mapView.myLocationEnabled = YES;
     self.view = mapView;
     mapView.settings.myLocationButton = YES;
-    NSLog(@"User's location: %@", mapView.myLocation);
     
     //настройка карты: внешний вид и параметры управления
     UIEdgeInsets mapInsets = UIEdgeInsetsMake(100.0, 0.0, 100.0, 0.0);
@@ -78,7 +75,6 @@
 -(void)addMarkerToMapView:(GMSMapView *)mapView withLatitude:(double)latitude
              andLongitude:(double)longitude setTitle:(NSString *)title
 {
-    NSLog(@"Add marker");
     GMSMarker *marker = [[GMSMarker alloc] init];
     marker.position = CLLocationCoordinate2DMake(latitude, longitude);
     marker.title = title;
@@ -88,14 +84,12 @@
 //построение ломанной
 -(void)addPath:(NSArray *)pointsArray toMapView:(GMSMapView *)mapView
 {
-    NSLog(@"Add path");
     GMSMutablePath *path = [GMSMutablePath path];
     CoordinatesForGMaps *coords = [CoordinatesForGMaps new];
     
     for (int i = 0; i < [pointsArray count]; i++)
     {
         coords = pointsArray[i];
-        NSLog(@"%@",coords);
         [path addCoordinate:CLLocationCoordinate2DMake(coords.latitude, coords.longitude)];
     }
     

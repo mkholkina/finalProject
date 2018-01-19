@@ -28,19 +28,12 @@ const CGFloat navigationBarHeight1 = 30.0f;
 
 - (instancetype)init
 {
-    NSLog(@"ViewController");
     self = [super init];
     if (self)
     {
         self.workWithCoreData = [KMD_WorkWithCoreData new];
         NSArray *listOfRoutes = [self.workWithCoreData listOfRoutes];
         _routesList = [NSMutableArray arrayWithArray:listOfRoutes];
-        
-        NSLog(@"%lu",(unsigned long)listOfRoutes.count);
-        for (Routes *i in _routesList)
-        {
-            NSLog(@"%@, %@",i.startPoint.name, i.finishPoint.name);
-        }
     }
     return self;
 }
@@ -98,7 +91,6 @@ const CGFloat navigationBarHeight1 = 30.0f;
 
 -(void)backToMainMenuClick
 {
-    NSLog(@"Cancel");
     [self.navigationController popToRootViewControllerAnimated:YES];
 }
 
