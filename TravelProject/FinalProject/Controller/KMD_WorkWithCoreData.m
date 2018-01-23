@@ -44,19 +44,11 @@ static NSString *const urlFormatString = @"https://maps.googleapis.com/maps/api/
 {
     NSURLSession *session = [NSURLSession sharedSession];
     NSString *generatedURL = [self generateURL:inputPoint];
-    CoordinatesForGMaps *coordinates = [CoordinatesForGMaps new];
     NSURLSessionDataTask *dataTask = [session dataTaskWithURL:[NSURL URLWithString:generatedURL]
                                             completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
                                                 if (!error)
                                                 {
-                                                    NSDictionary *json = [NSJSONSerialization JSONObjectWithData:data
-                                                                                                         options:0
-                                                                                                           error:nil];
-                                                    NSString *str = json[@"results"][0][@"geometry"][@"location"]
-                                                                                                            [@"lat"];
-                                                    coordinates.latitude = [str doubleValue];
-                                                    str = json[@"results"][0][@"geometry"][@"location"][@"lng"];
-                                                    coordinates.longitude = [str doubleValue];
+                                                    CoordinatesForGMaps *coordinates = [self dataParsing:data];
                                                     [self updateCoreDataItemWithCoordinates:coordinates
                                                                               useIdentifier:identifier];
                                                 }
@@ -64,9 +56,23 @@ static NSString *const urlFormatString = @"https://maps.googleapis.com/maps/api/
                                                 {
                                                     NSLog(@"Error occured!");
                                                 }
-                                            }];
+                                                
+                                            }
+                                      ];
     [dataTask resume];
 }
+
+-(CoordinatesForGMaps *)dataParsing:(NSData *)data
+{
+    CoordinatesForGMaps *coordinates = [CoordinatesForGMaps new];
+    NSDictionary *json = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
+    NSString *str = json[@"results"][0][@"geometry"][@"location"][@"lat"];
+    coordinates.latitude = [str doubleValue];
+    str = json[@"results"][0][@"geometry"][@"location"][@"lng"];
+    coordinates.longitude = [str doubleValue];
+    return coordinates;
+}
+
 
 //добавляет полученные координаты к сущности Points
 -(void)updateCoreDataItemWithCoordinates:(CoordinatesForGMaps *)coordinates useIdentifier:(NSInteger)identifier

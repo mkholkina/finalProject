@@ -22,7 +22,7 @@
 
 @end
 
-static NSString *const backgroundImage1 = @"startNewTripBack";
+static NSString *const backgroundImage1 = @"citiesBackground";
 static NSString *const newTripButtonImage1 = @"startNewTripButton";
 const CGFloat itemWidth = 3*80.0f+20.0f;
 const CGFloat itemHeight = 3*15.0f;
@@ -40,7 +40,7 @@ const CGFloat itemOffset = 2*10.0f;
     
     //background
     
-    self.view.backgroundColor = [UIColor whiteColor];
+    self.view.backgroundColor = [UIColor lightGrayColor];
     self.backgroundImage = [[UIImageView alloc] initWithImage:[UIImage imageNamed:backgroundImage1]];
     self.backgroundImage.frame = CGRectMake(0,
                                             0,
@@ -57,6 +57,7 @@ const CGFloat itemOffset = 2*10.0f;
                                                       itemWidth,
                                                       itemHeight);
     self.chooseStartPointTextField.textColor = [UIColor whiteColor];
+    self.chooseStartPointTextField.text = @"Moscow";
     [self.view addSubview:self.chooseStartPointTextField];
     
     //Finish point
@@ -67,6 +68,7 @@ const CGFloat itemOffset = 2*10.0f;
                                                        itemWidth,
                                                        itemHeight);
     self.chooseFinishPointTextField.textColor = [UIColor whiteColor];
+    self.chooseFinishPointTextField.text = @"Paris";
     [self.view addSubview:self.chooseFinishPointTextField];
     
     //button

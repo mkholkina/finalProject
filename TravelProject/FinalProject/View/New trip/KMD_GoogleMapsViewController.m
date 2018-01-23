@@ -85,12 +85,10 @@
 -(void)addPath:(NSArray *)pointsArray toMapView:(GMSMapView *)mapView
 {
     GMSMutablePath *path = [GMSMutablePath path];
-    CoordinatesForGMaps *coords = [CoordinatesForGMaps new];
-    
-    for (int i = 0; i < [pointsArray count]; i++)
+
+    for (CoordinatesForGMaps *coordinates in pointsArray)
     {
-        coords = pointsArray[i];
-        [path addCoordinate:CLLocationCoordinate2DMake(coords.latitude, coords.longitude)];
+        [path addCoordinate:CLLocationCoordinate2DMake(coordinates.latitude, coordinates.longitude)];
     }
     
     GMSPolyline *polyline = [GMSPolyline polylineWithPath:path];

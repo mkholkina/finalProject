@@ -14,7 +14,7 @@
 
 @end
 
-static NSString *const backgroundImage2 = @"test1";
+static NSString *const backgroundImage2 = @"grayBack3";
 
 @implementation KMD_TempViewController
 

@@ -59,7 +59,10 @@ static NSString *const settingsButtonImage = @"button3";
     
     //buttons
     
-    self.createNewTripButton = [[UIButton alloc] initWithFrame:CGRectMake(buttonX, buttonY, buttonWidth, buttonHeight)];
+    self.createNewTripButton = [[UIButton alloc] initWithFrame:CGRectMake(buttonX,
+                                                                          buttonY,
+                                                                          buttonWidth,
+                                                                          buttonHeight)];
     [self.createNewTripButton setImage:self.createNewTripButtonImage forState:UIControlStateNormal];
     [self.createNewTripButton setContentMode:UIViewContentModeScaleAspectFit];
     [self.createNewTripButton addTarget:self action:@selector(createNewTripButtonClick)
@@ -67,8 +70,10 @@ static NSString *const settingsButtonImage = @"button3";
     [self.view addSubview:self.createNewTripButton];
     
     
-    self.openExistingTripButton = [[UIButton alloc] initWithFrame:CGRectMake(buttonX, buttonY + buttonOffset,
-                                                                             buttonWidth, buttonHeight)];
+    self.openExistingTripButton = [[UIButton alloc] initWithFrame:CGRectMake(buttonX,
+                                                                             buttonY + buttonOffset,
+                                                                             buttonWidth,
+                                                                             buttonHeight)];
     [self.openExistingTripButton setImage:self.openExistingTripButtonImage forState:UIControlStateNormal];
     [self.openExistingTripButton setContentMode:UIViewContentModeScaleAspectFit];
     [self.openExistingTripButton addTarget:self action:@selector(openExistingTripButtonClick)
@@ -76,8 +81,10 @@ static NSString *const settingsButtonImage = @"button3";
     [self.view addSubview:self.openExistingTripButton];
     
     
-    self.openSettingsButton = [[UIButton alloc] initWithFrame:CGRectMake(buttonX, buttonY + buttonOffset * 2,
-                                                                         buttonWidth, buttonHeight)];
+    self.openSettingsButton = [[UIButton alloc] initWithFrame:CGRectMake(buttonX,
+                                                                         buttonY + buttonOffset * 2,
+                                                                         buttonWidth,
+                                                                         buttonHeight)];
     [self.openSettingsButton setImage:self.openSettingsButtonImage forState:UIControlStateNormal];
     [self.openSettingsButton setContentMode:UIViewContentModeScaleAspectFit];
     [self.openSettingsButton addTarget:self action:@selector(openSettingsButtonClick)
