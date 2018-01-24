@@ -12,23 +12,30 @@
 
 @interface KMD_StartNewTripViewController ()
 
-@property (nonatomic, strong) UITextField *chooseStartPointTextField;
-@property (nonatomic, strong) UITextField *chooseFinishPointTextField;
-@property (nonatomic, strong) UIButton *addRouteButton;
-
-@property (nonatomic, strong) KMD_WorkWithCoreData *workWithCoreData;
 @property (nonatomic, strong) UIImageView *backgroundImage;
 @property (nonatomic, strong) UIImage *createNewTripButtonImage;
 
+@property (nonatomic, strong) UIImageView *startPointImageView;
+@property (nonatomic, strong) UITextField *chooseStartPointTextField;
+
+@property (nonatomic, strong) UIImageView *finishPointImageView;
+@property (nonatomic, strong) UITextField *chooseFinishPointTextField;
+
+@property (nonatomic, strong) UIButton *addRouteButton;
+@property (nonatomic, strong) KMD_WorkWithCoreData *workWithCoreData;
+
 @end
 
-static NSString *const backgroundImage1 = @"citiesBackground";
+static NSString *const backgroundImage1 = @"chooseYourCityBack";
 static NSString *const newTripButtonImage1 = @"startNewTripButton";
-const CGFloat itemWidth = 3*80.0f+20.0f;
-const CGFloat itemHeight = 3*15.0f;
-const CGFloat picHeight = 3*20.0f;
-const CGFloat itemBottomOffsetY = 400.0f;
-const CGFloat itemOffset = 2*10.0f;
+static NSString *const startPointViewBack = @"startPoint";
+static NSString *const finishPointViewBack = @"finishPoint";
+
+const CGFloat koef = 3.5;
+const CGFloat offsetBetweenItems = 40.0f;
+const CGSize imageSize = {koef * 80.5f, koef * 20.0f};
+const CGSize itemSize = {koef * 80.5f, koef * 27.7f};
+
 
 @implementation KMD_StartNewTripViewController
 
@@ -36,8 +43,10 @@ const CGFloat itemOffset = 2*10.0f;
     [super viewDidLoad];
     self.workWithCoreData = [KMD_WorkWithCoreData new];
     self.createNewTripButtonImage = [UIImage imageNamed:newTripButtonImage1];
-    CGFloat itemBottomOffsetX = (CGRectGetWidth(self.view.frame) - itemWidth)/2;
     
+    CGSize itemBottomOffset = {(CGRectGetWidth(self.view.frame) - itemSize.width)/2,
+                               CGRectGetHeight(self.view.frame) - itemSize.height*2 - imageSize.height - offsetBetweenItems*3};
+
     //background
     
     self.view.backgroundColor = [UIColor lightGrayColor];
@@ -51,33 +60,50 @@ const CGFloat itemOffset = 2*10.0f;
     
     //Start point
     
+    self.startPointImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:startPointViewBack]];
+    self.startPointImageView.frame = CGRectMake(itemBottomOffset.width,
+                                                itemBottomOffset.height,
+                                                itemSize.width,
+                                                itemSize.height);
+    [self.startPointImageView setContentMode:UIViewContentModeScaleToFill];
+    [self.view addSubview:self.startPointImageView];
+    
     self.chooseStartPointTextField = [UITextField new];
-    self.chooseStartPointTextField.frame = CGRectMake(itemBottomOffsetX,
-                                                      itemBottomOffsetY,
-                                                      itemWidth,
-                                                      itemHeight);
+    self.chooseStartPointTextField.frame = CGRectMake(itemBottomOffset.width,
+                                                      self.startPointImageView.center.y,
+                                                      itemSize.width,
+                                                      itemSize.height/2);
     self.chooseStartPointTextField.textColor = [UIColor whiteColor];
     self.chooseStartPointTextField.text = @"Moscow";
     [self.view addSubview:self.chooseStartPointTextField];
     
+    
     //Finish point
     
+    self.finishPointImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:finishPointViewBack]];
+    self.finishPointImageView.frame = CGRectMake(itemBottomOffset.width,
+                                                 CGRectGetMaxY(self.startPointImageView.frame) + offsetBetweenItems,
+                                                 itemSize.width,
+                                                 itemSize.height);
+    [self.finishPointImageView setContentMode:UIViewContentModeScaleToFill];
+    [self.view addSubview:self.finishPointImageView];
+    
     self.chooseFinishPointTextField = [UITextField new];
-    self.chooseFinishPointTextField.frame = CGRectMake(itemBottomOffsetX,
-                                                       CGRectGetMaxY(self.chooseStartPointTextField.frame) + 4*itemOffset,
-                                                       itemWidth,
-                                                       itemHeight);
+    self.chooseFinishPointTextField.frame = CGRectMake(itemBottomOffset.width,
+                                                      self.finishPointImageView.center.y,
+                                                      itemSize.width,
+                                                      itemSize.height/2);
     self.chooseFinishPointTextField.textColor = [UIColor whiteColor];
     self.chooseFinishPointTextField.text = @"Paris";
     [self.view addSubview:self.chooseFinishPointTextField];
     
     //button
-    
     self.addRouteButton = [UIButton new];
-    self.addRouteButton.frame = CGRectMake(itemBottomOffsetX,
-                                           CGRectGetMaxY(self.chooseFinishPointTextField.frame) + 3*itemOffset,
-                                           itemWidth,
-                                           picHeight);
+    self.addRouteButton.frame = CGRectMake(itemBottomOffset.width,
+                                           CGRectGetMaxY(self.finishPointImageView.frame) + offsetBetweenItems,
+                                           imageSize.width,
+                                           imageSize.height);
+    
     self.addRouteButton.backgroundColor = [UIColor whiteColor];
     [self.addRouteButton setImage:self.createNewTripButtonImage forState:UIControlStateNormal];
     [self.addRouteButton setContentMode:UIViewContentModeScaleAspectFit];

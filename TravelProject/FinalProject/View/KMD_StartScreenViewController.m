@@ -26,7 +26,8 @@
 
 const CGFloat buttonWidth = 3 * 80.0f;
 const CGFloat buttonHeight = 3 * 20.0f;
-const CGFloat buttonOffset = 30.0f + buttonHeight;
+const CGFloat buttonOffset = 30.0f;
+const CGFloat buttonOffset2 = 30.0f + buttonHeight;
 
 static NSString *const backgroundImage = @"mainScreenBackground";
 static NSString *const newTripButtonImage = @"button1";
@@ -38,6 +39,7 @@ static NSString *const settingsButtonImage = @"button3";
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.navigationController setNavigationBarHidden:YES];
+    
     //background
     
     self.view.backgroundColor = [UIColor whiteColor];
@@ -50,8 +52,9 @@ static NSString *const settingsButtonImage = @"button3";
     
     //prepare
     
-    CGFloat buttonY = CGRectGetHeight(self.view.frame) - buttonOffset * 4;
+    CGFloat buttonY = CGRectGetHeight(self.view.frame) - buttonOffset2 * 4;
     CGFloat buttonX = (CGRectGetWidth(self.view.frame) - buttonWidth) / 2;
+    CGFloat buttonYDown = buttonOffset2 + buttonOffset;
 
     self.createNewTripButtonImage = [UIImage imageNamed:newTripButtonImage];
     self.openExistingTripButtonImage = [UIImage imageNamed:existingTripButtonImage];
@@ -59,10 +62,8 @@ static NSString *const settingsButtonImage = @"button3";
     
     //buttons
     
-    self.createNewTripButton = [[UIButton alloc] initWithFrame:CGRectMake(buttonX,
-                                                                          buttonY,
-                                                                          buttonWidth,
-                                                                          buttonHeight)];
+    self.createNewTripButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    self.createNewTripButton.translatesAutoresizingMaskIntoConstraints = NO;
     [self.createNewTripButton setImage:self.createNewTripButtonImage forState:UIControlStateNormal];
     [self.createNewTripButton setContentMode:UIViewContentModeScaleAspectFit];
     [self.createNewTripButton addTarget:self action:@selector(createNewTripButtonClick)
@@ -70,10 +71,8 @@ static NSString *const settingsButtonImage = @"button3";
     [self.view addSubview:self.createNewTripButton];
     
     
-    self.openExistingTripButton = [[UIButton alloc] initWithFrame:CGRectMake(buttonX,
-                                                                             buttonY + buttonOffset,
-                                                                             buttonWidth,
-                                                                             buttonHeight)];
+    self.openExistingTripButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    self.openExistingTripButton.translatesAutoresizingMaskIntoConstraints = NO;
     [self.openExistingTripButton setImage:self.openExistingTripButtonImage forState:UIControlStateNormal];
     [self.openExistingTripButton setContentMode:UIViewContentModeScaleAspectFit];
     [self.openExistingTripButton addTarget:self action:@selector(openExistingTripButtonClick)
@@ -81,15 +80,61 @@ static NSString *const settingsButtonImage = @"button3";
     [self.view addSubview:self.openExistingTripButton];
     
     
-    self.openSettingsButton = [[UIButton alloc] initWithFrame:CGRectMake(buttonX,
-                                                                         buttonY + buttonOffset * 2,
-                                                                         buttonWidth,
-                                                                         buttonHeight)];
+    self.openSettingsButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    self.openSettingsButton.translatesAutoresizingMaskIntoConstraints = NO;
     [self.openSettingsButton setImage:self.openSettingsButtonImage forState:UIControlStateNormal];
     [self.openSettingsButton setContentMode:UIViewContentModeScaleAspectFit];
     [self.openSettingsButton addTarget:self action:@selector(openSettingsButtonClick)
                       forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:self.openSettingsButton];
+    
+    
+    //constraints
+    
+    
+    NSDictionary *dict =  @{
+                            @"backgroundImage": self.backgroundImage,
+                            @"createNewTripButton": self.createNewTripButton,
+                            @"openExistingTripButton": self.openExistingTripButton,
+                            @"openSettingsButton": self.openSettingsButton
+                            };
+
+    NSDictionary *metrics = @{
+                              @"buttonWidth":@(buttonWidth),
+                              @"buttonHeight":@(buttonHeight),
+                              @"buttonOffset":@(buttonOffset),
+                              @"buttonY":@(buttonY),
+                              @"buttonX":@(buttonX),
+                              @"buttonYDown":@(buttonYDown)
+                              };
+    
+    NSArray *buttonsConstrV = [NSLayoutConstraint
+                               constraintsWithVisualFormat: @"V:|-buttonY-[createNewTripButton(buttonHeight)]-buttonOffset-[openExistingTripButton(buttonHeight)]-buttonOffset-[openSettingsButton(buttonHeight)]-buttonYDown-|"
+                               options:0
+                               metrics:metrics
+                               views:dict];
+    [self.view addConstraints: buttonsConstrV];
+    
+    NSArray *createNewTripButtonConstrH = [NSLayoutConstraint
+                                           constraintsWithVisualFormat: @"H:|-buttonX-[createNewTripButton(buttonWidth)]-buttonX-|"
+                                           options:0
+                                           metrics:metrics
+                                           views:dict];
+    [self.view addConstraints: createNewTripButtonConstrH];
+    
+    NSArray *openExistingTripButtonConstrH = [NSLayoutConstraint
+                                              constraintsWithVisualFormat: @"H:|-buttonX-[openExistingTripButton(buttonWidth)]-buttonX-|"
+                                              options:0
+                                              metrics:metrics
+                                              views:dict];
+    [self.view addConstraints: openExistingTripButtonConstrH];
+    
+    NSArray *openSettingsButtonConstrH = [NSLayoutConstraint
+                                          constraintsWithVisualFormat: @"H:|-buttonX-[openSettingsButton(buttonWidth)]-buttonX-|"
+                                          options:0
+                                          metrics:metrics
+                                          views:dict];
+    [self.view addConstraints: openSettingsButtonConstrH];
 }
 
 -(void)createNewTripButtonClick
